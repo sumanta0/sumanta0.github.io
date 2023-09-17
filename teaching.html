@@ -37,10 +37,10 @@
 <h1 align=center style="font-family: 'Bungee Shade', cursive; font-size:45px;">Sumanta Das</h1>
 
 <ul class ="nav">
-  <li><a href="index.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px">About</a></li>
-  <li><a href="research.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px">Research</a></li>
-  <li><a href="teaching.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px">Teaching</a></li>
-  <li><a href="others.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px">Others</a></li>
+  <li><a id="about" href="index.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
+  <li><a id="research" href="research.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
+  <li><a id="teaching" href="teaching.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
+  <li><a id="others" href="others.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
 </ul>
 
 <table align=center  style="text-align: justify; text-justify: inter-word;">
@@ -134,6 +134,17 @@ a:active {
 
 
 </style>
-
+<script>
+document.getElementById("about").innerHTML = 'About';
+</script>
+<script>
+document.getElementById("research").innerHTML = 'Research';
+</script>
+<script>
+document.getElementById("teaching").innerHTML = 'Teaching';
+</script>
+<script>
+document.getElementById("others").innerHTML = 'Others';
+</script>
 </body>
 </html>
