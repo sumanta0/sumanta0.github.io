@@ -26,6 +26,38 @@
   @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,450;1,450&display=swap');
 </style>
 
+<style>
+    /* Styling for collapsible section */
+    .collapsible {
+      cursor: pointer;
+      padding: 10px 0;
+      width: 100%;
+      text-align: left;
+      background-color: transparent;
+      outline: none;
+      font-weight: bold;
+      border: none; /* Remove border */
+      display: inline-flex; /* Change to inline-flex for better positioning */
+      align-items: center;
+	  font-family: 'EB Garamond', serif; 
+	  font-size: 23px;
+	  font-optical-sizing: auto; 
+	  font-style: normal;"
+    }
+
+    .collapsible span {
+      transition: transform 0.2s ease;
+      margin-left: 5px; /* Add small space between the text and arrow */
+    }
+
+    .content {
+      display: none;
+      overflow: hidden;
+      padding: 10px 0;
+      background-color: transparent;
+    }
+  </style>
+  
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,57 +85,68 @@
  Recently, I have started working on the obstruction to the existence of almost complex structures. <br/> <br/>
  <h1 style="font-family: 'Cinzel Decorative', cursive; font-size: 25px" id="publication">Publication:</h1> 
  
- 
- <ul>
-     <li>Strong topological rigidity of non-compact orientable surfaces. To appear in <a href="https://msp.org/soon/coming.php?jpath=agt#220626-SumantaDas" style="color:#000080"><I>Algebraic & Geometric Topology</I></a>. <a href="https://doi.org/10.48550/arXiv.2111.11194" style="color:#000080">arXiv: 2111.11194v3</a>.
-       <details>
-          <summary>Abstract & Slides</summary>
-                   We show that every orientable infinite-type surface without boundary is properly rigid as a consequence of a more general result. 
-                   Namely, we prove that if a homotopy equivalence $f\colon\ \Sigma'\to \Sigma$ between any two non-compact orientable surfaces without boundary is a proper map, 
-                   then $f$ is properly homotopic to a homeomorphism, provided $\Sigma$ is homeomorphic to neither the plane nor the punctured plane. 
-                   Thus, all non-compact orientable surfaces without boundary, except the plane and the punctured plane, are topologically rigid in a strong sense.<br><br/>
-                   <object data="STR.pdf" type="application/pdf"  width="100%" height="500">
-                         <embed src="STR.pdf" type="application/pdf" />
-                   </object>
-         </details>
-     </li>
-     
-	 <li>Surfaces of infinite-type are non-Hopfian, with Siddhartha Gadgil. <I><a href="https://doi.org/10.5802/crmath.504" style="color:#000080">Comptes Rendus Math&eacute;matique</a></I>, Volume 361 (2023), p. 1349-1356. <a href="https://doi.org/10.48550/arXiv.2210.03395" style="color:#000080">arXiv:2210.03395v2</a>.
-  
-         <details>
-            <summary>Abstract & Slides</summary>
-                     We show that an oriented surface $\Sigma$ without boundary is of finite-type if and only if every proper self-map $f\colon\ \Sigma\to \Sigma$ of degree $\pm 1$ is homotopic to a homeomorphism. 
-                     Thus, an oriented surface without boundary is Hopfian if and only if it is of finite-type. <br><br/>
-                     <object data="hopfian.pdf" type="application/pdf"  width="100%" height="500">
-                            <embed src="hopfian.pdf" type="application/pdf" />
-                     </object>
-         </details>
-     </li>
 
-     <li>The Goldman bracket characterizes homeomorphisms between non-compact surfaces, with Siddhartha Gadgil and Ajay Kumar Nair. To appear in <a href="https://msp.org/soon/coming.php?jpath=agt#230727-Gadgil" style="color:#000080"><I>Algebraic & Geometric Topology</I></a>. <a href="https://doi.org/10.48550/arXiv.2307.02769" style="color:#000080">arXiv:2307.02769v2</a>.
-         <details>
-            <summary>Abstract & Slides</summary>
-                     We show that a homotopy equivalence $f\colon\  \Sigma'\to \Sigma$ ($f$ may not be proper) between two non-compact oriented surfaces without boundary is homotopic to  
-                     <ul>
-                          <li>a homeomorphism if and only if $\iota\left(\widehat{\alpha},\widehat{\beta}\right)=\iota\left(\widehat{f\circ \alpha}, \widehat{f\circ \beta}\right)$ for any two closed curves $\alpha,\beta\colon\ \Bbb S^1\to \Sigma'$, and </li>
-                          <li>an orientation preserving homeomorphism if and only if $\left[\widehat{\alpha},\widehat{\beta}\right]=\left[\widehat{f\circ \alpha}, \widehat{f\circ \beta}\right]$ for any two closed curves $\alpha,\beta\colon\ \Bbb S^1\to \Sigma'$;</li>
-                     </ul>
-                     provided $\Sigma$ is homeomorphic to neither the plane nor the punctured plane. Here, $\iota(-,-)$ and $[-,-]$ denote the geometric intersection number and the Goldman Lie bracket, respectively, and $\widehat\quad$ denotes the free homotopy class of a closed curve.<br><br/>
-					 <object data="Goldman.pdf" type="application/pdf"  width="100%" height="500">
-                            <embed src="Goldman.pdf" type="application/pdf" />
-                     </object>
-         </details>
-     </li> 
-</ul> 
+ 
+<ul style="text-align: left;">
+  <li>
+    Strong topological rigidity of non-compact orientable surfaces. To appear in 
+    <a href="https://msp.org/soon/coming.php?jpath=agt#220626-SumantaDas" style="color:#000080"><i>Algebraic & Geometric Topology</i></a>. 
+    <a href="https://doi.org/10.48550/arXiv.2111.11194" style="color:#000080">arXiv: 2111.11194v3</a>.
+    <button class="collapsible">
+      Abstract & Slides <span>&#9654;</span>
+    </button>
+    <div class="content" style="text-align: justify;">
+      We show that every orientable infinite-type surface without boundary is properly rigid as a consequence of a more general result. 
+      Namely, we prove that if a homotopy equivalence $f\colon\ \Sigma'\to \Sigma$ between any two non-compact orientable surfaces without boundary is a proper map, 
+      then $f$ is properly homotopic to a homeomorphism, provided $\Sigma$ is homeomorphic to neither the plane nor the punctured plane. 
+      Thus, all non-compact orientable surfaces without boundary, except the plane and the punctured plane, are topologically rigid in a strong sense.<br><br/>
+      <object data="STR.pdf" type="application/pdf" width="100%" height="500"></object>
+    </div>
+  </li>
+  
+  <li>
+    Surfaces of infinite-type are non-Hopfian, with Siddhartha Gadgil. 
+    <i><a href="https://doi.org/10.5802/crmath.504" style="color:#000080">Comptes Rendus Math&eacute;matique</a></i>, Volume 361 (2023), p. 1349-1356. 
+    <a href="https://doi.org/10.48550/arXiv.2210.03395" style="color:#000080">arXiv:2210.03395v2</a>.
+    <button class="collapsible">
+      Abstract & Slides <span>&#9654;</span>
+    </button>
+    <div class="content"style="text-align: justify;">
+      We show that an oriented surface $\Sigma$ without boundary is of finite-type if and only if every proper self-map $f\colon\ \Sigma\to \Sigma$ of degree $\pm 1$ is homotopic to a homeomorphism. 
+      Thus, an oriented surface without boundary is Hopfian if and only if it is of finite-type. <br><br/>
+      <object data="hopfian.pdf" type="application/pdf" width="100%" height="500"></object>
+    </div>
+  </li>
+  
+  <li>
+    The Goldman bracket characterizes homeomorphisms between non-compact surfaces, with Siddhartha Gadgil and Ajay Kumar Nair. 
+    To appear in <a href="https://msp.org/soon/coming.php?jpath=agt#230727-Gadgil" style="color:#000080"><i>Algebraic & Geometric Topology</i></a>. 
+    <a href="https://doi.org/10.48550/arXiv.2307.02769" style="color:#000080">arXiv:2307.02769v2</a>.
+    <button class="collapsible">
+      Abstract & Slides <span>&#9654;</span>
+    </button>
+    <div class="content"style="text-align: justify;">
+      We show that a homotopy equivalence $f\colon\  \Sigma'\to \Sigma$ ($f$ may not be proper) between two non-compact oriented surfaces without boundary is homotopic to  
+      <ul>
+        <li>a homeomorphism if and only if $\iota\left(\widehat{\alpha},\widehat{\beta}\right)=\iota\left(\widehat{f\circ \alpha}, \widehat{f\circ \beta}\right)$ for any two closed curves $\alpha,\beta\colon\ \Bbb S^1\to \Sigma'$, and </li>
+        <li>an orientation preserving homeomorphism if and only if $\left[\widehat{\alpha},\widehat{\beta}\right]=\left[\widehat{f\circ \alpha}, \widehat{f\circ \beta}\right]$ for any two closed curves $\alpha,\beta\colon\ \Bbb S^1\to \Sigma'$;</li>
+      </ul>
+      provided $\Sigma$ is homeomorphic to neither the plane nor the punctured plane. Here, $\iota(-,-)$ and $[-,-]$ denote the geometric intersection number and the Goldman Lie bracket, respectively, and $\widehat\quad$ denotes the free homotopy class of a closed curve.<br><br/>
+      <object data="Goldman.pdf" type="application/pdf" width="100%" height="500"></object>
+    </div>
+  </li>
+</ul>
 
 
 <h1 style="font-family: 'Cinzel Decorative', cursive; font-size: 25px" id="preprint">Pre-print:</h1> 
- <ul>
+ <ul style="text-align: left;">
  <li>Classification of $\pi_1$-injective proper maps between non-compact surfaces. <a href="https://arxiv.org/abs/2405.09824" style="color:#000080">arXiv:2405.09824v1</a>.
-<details>
-  <summary>Abstract</summary>
-  We show that almost all $\pi_1$-injective proper maps between two non-compact orientable surfaces without boundary, where surfaces are possibly of infinite type, can be properly homotoped to finite-sheeted covering maps.
-  More precisely, we prove the following three theorems. 
+	<button class="collapsible">
+      Abstract & Slides <span>&#9654;</span>
+    </button>
+	<div class="content"style="text-align: justify;">
+	We show that almost all $\pi_1$-injective proper maps between two non-compact orientable surfaces without boundary, where surfaces are possibly of infinite type, can be properly homotoped to finite-sheeted covering maps.
+	More precisely, we prove the following three theorems. 
   <ul> 
      <li><b>Theorem 1.1</b> Let $\Sigma',\Sigma$ be two non-compact oriented surfaces without boundary such that $\Sigma'$ is neither the plane nor the punctured plane. 
               Suppose $f\colon \Sigma'\to \Sigma$ is a $\pi_1$-injective proper map. 
@@ -134,7 +177,7 @@
 	 </li>
    </ul>
   
-</details>
+</div>
 
 </li>
 </ul>
@@ -252,5 +295,23 @@ document.getElementById("teaching").innerHTML = 'Teaching';
 <script>
 document.getElementById("others").innerHTML = 'Others';
 </script>
+<script>
+    // JavaScript to toggle collapsible content
+    var collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach(function(collapsible) {
+      collapsible.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var content = this.nextElementSibling;
+        var arrow = this.querySelector('span');
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          arrow.innerHTML = '&#9654;'; // Right arrow (?) for "closed"
+        } else {
+          content.style.display = 'block';
+          arrow.innerHTML = '&#x25BC;'; // Down arrow (?) for "open"
+        }
+      });
+    });
+  </script>
 </body>
 </html>
