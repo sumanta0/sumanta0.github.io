@@ -1,32 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-	<link rel="icon" type="image/x-icon" href="sd.svg">
-	<!---Latest Mathjax LaTex support--->
-	<script>
-		MathJax = {
-		tex: {
-		inlineMath: [['$', '$']]
-		}
-		};
-	</script>
-	<script type="text/javascript" id="MathJax-script" async
-	src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-	</script>
-	<!---Latest Mathjax LaTex support--->
+    <link rel="icon" type="image/x-icon" href="sd.svg">
+    
+    <!--- Mathjax LaTeX support --->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$']] }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <style>
-	    @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Cormorant+Upright:wght@300;400;500;600;700&family=Sacramento&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Cormorant+Upright:wght@300;400;500;600;700&family=Sacramento&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,450;1,450&display=swap');
+
         body {
             font-family: 'EB Garamond', serif;
-			font-size: 21px;
+            font-size: 21px;
             line-height: 1.6;
             margin: 0;
             padding: 0;
             color: #fff;
             background-color: #000;
-            perspective: 1000px; /* Overall 3D perspective */
+            perspective: 1000px;
         }
         .container {
             max-width: 900px;
@@ -35,7 +41,7 @@
             background: black;
             border-radius: 10px;
             border: 1px solid black;
-			text-align: justify;
+            text-align: justify;
         }
         h1 {
             font-size: 2.5em;
@@ -43,7 +49,7 @@
             margin-bottom: 10px;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
-            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); /* Enhanced depth for text */
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
         }
         h2 {
             font-size: 1.8em;
@@ -59,7 +65,7 @@
         a {
             color: #ffffb3;
             text-decoration: none;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Slight shadow for depth */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
         a:hover {
             text-decoration: underline;
@@ -72,49 +78,29 @@
             margin-bottom: 20px;
             padding: 15px;
             border-radius: 8px;
-            background: black; /* 3D lighting effect */
+            background: black;
             border: 1px solid white;
-            box-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 5px rgba(255, 255, 255, .5); /* Glow + depth */
-            transform: rotateY(1deg) rotateX(1deg); /* 3D tilt effect */
+            box-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 5px rgba(255, 255, 255, .5);
+            transform: rotateY(1deg) rotateX(1deg);
             transition: transform 0.5s ease;
         }
         .section:hover {
-            transform: rotateY(-2deg) rotateX(-1deg) scale(1.03); /* Tilt and scale on hover */
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 10px rgba(0, 0, 0, 0.7); /* More shadow on hover */
+            transform: rotateY(-2deg) rotateX(-1deg) scale(1.03);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 10px rgba(0, 0, 0, 0.7);
         }
-        .education {
-            transform: rotateY(2deg) rotateX(1deg); /* Individual block tilt */
-        }
-        .research {
-            transform: rotateY(-2deg) rotateX(2deg); /* Different tilt */
-        }
-        .papers {
-            transform: rotateY(1deg) rotateX(-1deg);
-        }
-        .presentations {
-            transform: rotateY(-1deg) rotateX(-1deg);
-        }
-        .teaching {
-            transform: rotateY(2deg) rotateX(-1deg);
-        }
-        .awards {
-            transform: rotateY(-2deg) rotateX(1deg);
-        }
-        .service {
-            transform: rotateY(1deg) rotateX(2deg);
-        }
-        .conferences {
-            transform: rotateY(-1deg) rotateX(-2deg);
-        }
-        .skills {
-            transform: rotateY(2deg) rotateX(1deg);
-        }
-        .references {
-            transform: rotateY(-2deg) rotateX(-1deg);
-        }
-		.section0 {
-            margin-bottom: 20px;
-        }
+        
+        .education { transform: rotateY(2deg) rotateX(1deg); }
+        .research { transform: rotateY(-2deg) rotateX(2deg); }
+        .papers { transform: rotateY(1deg) rotateX(-1deg); }
+        .presentations { transform: rotateY(-1deg) rotateX(-1deg); }
+        .teaching { transform: rotateY(2deg) rotateX(-1deg); }
+        .awards { transform: rotateY(-2deg) rotateX(1deg); }
+        .service { transform: rotateY(1deg) rotateX(2deg); }
+        .conferences { transform: rotateY(-1deg) rotateX(-2deg); }
+        .skills { transform: rotateY(2deg) rotateX(1deg); }
+        .references { transform: rotateY(-2deg) rotateX(-1deg); }
+
+        .section0 { margin-bottom: 20px; }
         .section0-title {
             font-weight: bold;
             color: #e0e0e0;
@@ -122,35 +108,30 @@
             padding-bottom: 5px;
             text-shadow: 1px 1px 0 #333;
         }
-	 
-	 
     </style>
-	<style>
-  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,450;1,450&display=swap');
-</style>
 </head>
 <body>
     <div class="container">
         <h1>Sumanta Das</h1>
         <div class="section0 contact-info">
-		    <p>Indian Institute of Technology Bombay, India</p>
+            <p>Indian Statistical Institute, Bangalore, India</p>
             <p>Email: <a href="mailto:sumantadas@alum.iisc.ac.in">sumantadas@alum.iisc.ac.in</a></p>
             <p>Website: <a href="http://sumanta0.github.io" target="_blank">sumanta0.github.io</a></p>  
         </div>
 
-	<div class="section position">
-            <h2 class="section-title">Academic Position</h2>
+        <div class="section position">
+            <h2 class="section-title">Academic Positions</h2>
+            <p><strong>NBHM Postdoctoral Fellow</strong><br>
+            Indian Statistical Institute, Bangalore<br>
+            Mentor: Prof. Suresh Nayak<br>
+            Nov 2026 – Present</p>
+
             <p><strong>Institute Postdoctoral Fellow</strong><br>
             Department of Mathematics, IIT Bombay<br>
             Mentor: Prof. Rekha Santhanam<br>
-            Oct 2024 – Present<br>
+            Oct 2024 – Oct 2026</p>
         </div>
+        
         <div class="section education">
             <h2 class="section-title">Education</h2>
             <p><strong>Indian Institute of Science</strong><br>
@@ -163,17 +144,19 @@
             M. Math, Jul 2017 – May 2019</p>
 
             <p><strong>Ramakrishna Mission Vidyamandira</strong><br>
-            B.Sc Mathematics, Aug 2014 – May 2017<br>
+            B.Sc. in Mathematics, Aug 2014 – May 2017<br>
             Minors in Statistics and Computer Science</p>
         </div>
 
         <div class="section research">
             <h2 class="section-title">Research Interests</h2>
-            <p>Low-dimensional topology:</p>
+            <p>Low-dimensional topology and its interaction with algebraic topology:</p>
             <ul>
-                <li>Maps of non-zero degree</li>
-                <li>Mapping class groups of surfaces</li>
-                <li>The Goldman Lie algebra</li>
+                <li>Maps of non-zero degree between non-compact two- or three-dimensional manifolds</li>
+                <li>Mapping class groups of finite- and infinite-type surfaces</li>
+                <li>The Goldman Lie algebra and its applications in surface topology</li>
+                <li>Proper homotopy theory and its applications in three-manifold topology</li>
+                <li>Applications of various limit functors in non-compact manifold theory</li>
             </ul>
         </div>
 
@@ -181,15 +164,16 @@
             <h2 class="section-title">Papers</h2>
             <p><strong>Accepted:</strong></p>
             <ul>
-                <li>Strong topological rigidity of non-compact orientable surfaces. <a href="https://doi.org/10.2140/agt.2024.24.4423"><i>Algebraic & Geometric Topology</i></a>, Volume 24-8 (2024), pp. 4423–4469. <a href="https://doi.org/10.48550/arXiv.2111.11194">arXiv: 2111.11194v3</a>.</li>
+                <li>Strong topological rigidity of non-compact orientable surfaces. <a href="https://doi.org/10.2140/agt.2024.24.4423"><i>Algebraic &amp; Geometric Topology</i></a>, Volume 24-8 (2024), pp. 4423–4469. <a href="https://doi.org/10.48550/arXiv.2111.11194">arXiv:2111.11194v3</a>.</li>
                 <li>Surfaces of infinite-type are non-Hopfian, with Siddhartha Gadgil. <a href="https://doi.org/10.5802/crmath.504"><I>Comptes Rendus Math&eacute;matique</I></a>, Volume 361 (2023), pp. 1349–1356. <a href="https://doi.org/10.48550/arXiv.2210.03395">arXiv:2210.03395v2</a>.</li>
-                <li>The Goldman bracket characterizes homeomorphisms between non-compact surfaces, with Siddhartha Gadgil and Ajay Kumar Nair. <a href="https://doi.org/10.2140/agt.2025.25.3585"><I>Algebraic & Geometric Topology</I></a>, Volume 25-6 (2025), pp. 3585–3601. <a href="https://doi.org/10.48550/arXiv.2307.02769">arXiv:2307.02769v2</a>.</li>
-				<li>$\pi_1$-injective proper maps between non-compact surfaces. <a href="https://doi.org/10.1090/proc/17424"><I>Proceedings of the American Mathematical Society</I></a>, Volume 153-12 (2025), pp. 5437–5452. <a href="https://arxiv.org/abs/2405.09824">arXiv:2405.09824v2</a>.</li>
+                <li>The Goldman bracket characterizes homeomorphisms between non-compact surfaces, with Siddhartha Gadgil and Ajay Kumar Nair. <a href="https://doi.org/10.2140/agt.2025.25.3585"><I>Algebraic &amp; Geometric Topology</I></a>, Volume 25-6 (2025), pp. 3585–3601. <a href="https://doi.org/10.48550/arXiv.2307.02769">arXiv:2307.02769v2</a>.</li>
+                <li>$\pi_1$-injective proper maps between non-compact surfaces. <a href="https://doi.org/10.1090/proc/17424"><I>Proceedings of the American Mathematical Society</I></a>, Volume 153-12 (2025), pp. 5437–5452. <a href="https://arxiv.org/abs/2405.09824">arXiv:2405.09824v2</a>.</li>
             </ul>
 
-            <p><strong>Pre-print:</strong></p>
+            <p><strong>Pre-prints:</strong></p>
             <ul>
-                <li>Geometric kernels of proper maps between non-compact surfaces. <a href="https://doi.org/10.48550/arXiv.2508.21057">arXiv:2508.21057v1</a>.</li>
+                <li>Geometric kernels of proper maps between non-compact surfaces, 2025. <a href="https://doi.org/10.48550/arXiv.2508.21057">arXiv:2508.21057</a>.</li>
+                <li>Brown's asymptotic limit functor and proper homology, with Rekha Santhanam, 2026. <a href="https://doi.org/10.48550/arXiv.2609.14063">arXiv:2609.14063</a>.</li>
             </ul>
         </div>
 
@@ -197,18 +181,19 @@
             <h2 class="section-title">Presentations</h2>
             <p><strong>Invited Talks:</strong></p>
             <ul>
-				<li>30 Jan 2025. The Goldman bracket characterizes homeomorphisms between non-compact surfaces. DMS Topology & Geometry seminar, IISER Kolkata.</li>
-				<li>29 Jan 2025. Topological rigidity of two- and three-dimensional manifolds. DMS Colloquium, IISER Kolkata.</li>
-				<li>26 July 2024. Strong topological rigidity of non-compact orientable surfaces. Topology Seminar, IIT Bombay.</li>
+                <li>30 Jan 2025. The Goldman bracket characterizes homeomorphisms between non-compact surfaces. DMS Topology &amp; Geometry Seminar, IISER Kolkata.</li>
+                <li>29 Jan 2025. Topological rigidity of two- and three-dimensional manifolds. DMS Colloquium, IISER Kolkata.</li>
+                <li>26 Jul 2024. Strong topological rigidity of non-compact orientable surfaces. Topology Seminar, IIT Bombay.</li>
                 <li>11 Sep 2023. Strong topological rigidity of non-compact orientable surfaces. Prospectos en Topolog&iacute;a, CCM UNAM, M&eacute;xico.</li>
-                <li>10 Feb 2023. Surfaces of infinite type are non-Hopfian. Geometry & Topology Seminars (GaTs), IISER Bhopal.</li>
+                <li>10 Feb 2023. Surfaces of infinite type are non-Hopfian. Geometry &amp; Topology Seminars (GaTs), IISER Bhopal.</li>
             </ul>
 
             <p><strong>Contributed Talks:</strong></p>
             <ul>
-				<li>6 Oct 2025. Proper homology in the spirit of Brown's proper homotopy theory. Topology Seminar, IIT Bombay.</li>
-				<li>12 Sep 2025. Geometric kernels of proper maps between non-compact surfaces. Geometry and Topology Seminar, IIT Bombay.</li>
-				<li>6 Mar 2025. Strong topological rigidity of orientable infinite-type surfaces. New Trends in Teichm&uuml;ller Theory, ICTS, Bangalore.</li>
+                <li>18 Mar, 23 Apr, and 9 Jul 2026 (Three-part series). Mapping class groups: Teichm&uuml;ller theory and geometry. Geometry and Topology Seminar, IIT Bombay.</li>
+                <li>6 Oct 2025. Proper homology in the spirit of Brown's proper homotopy theory. Topology Seminar, IIT Bombay.</li>
+                <li>12 Sep 2025. Geometric kernels of proper maps between non-compact surfaces. Geometry and Topology Seminar, IIT Bombay.</li>
+                <li>6 Mar 2025. Strong topological rigidity of orientable infinite-type surfaces. New Trends in Teichm&uuml;ller Theory, ICTS, Bangalore.</li>
                 <li>31 Jan 2023. The Lusternik-Schnirelmann category. Prime Time Seminars, Department of Mathematics, IISc.</li>
                 <li>24 Nov 2022. Strong topological rigidity of non-compact orientable surfaces. Postdoc-Student Symposium, Department of Mathematics, IISc.</li>
             </ul>
@@ -216,44 +201,54 @@
 
         <div class="section teaching">
             <h2 class="section-title">Teaching Assistantships</h2>
-			<ul>
-				<li>Autumn 2025:  Real Analysis (MA 403), IIT Bombay (Instructor: Prof. Anusha Mangala Krishnan)</li>
-				<li>Spring 2025:  General Topology (MA 406), IIT Bombay (Instructor: Prof. Chandan Biswas)</li>
-				<li><p>Introduction to Algebraic Topology (MA 232), IISc, Bangalore:</p>
-				<ul>
-					<li>Oct 2020 – Jan 2021 (Instructor - Prof. Siddhartha Gadgil)</li>
-					<li>Aug 2021 – Dec 2021 (Instructor - Prof. Basudeb Datta)</li>
-					<li>Aug 2022 – Dec 2022 (Instructor - Prof. Harish Seshadri)</li>
-				</ul></li>
-				<li><p>Dec 2022: Annual Foundation School – I, Mepco Schlenk Engineering College, Sivakasi (Instructor - Prof. H.A. Gururaja)</p></li>
-			</ul>
+            <ul>
+                <li>Autumn 2026: Calculus (MA 105), IIT Bombay (Instructors: Prof. Prachi Mahajan, Prof. Debanjana Mitra, Prof. Saikat Mazumdar, Prof. Suman Kumar Sahoo)</li>
+                <li>Spring 2026: Multivariable Calculus (MA 410), IIT Bombay (Instructor: Prof. Shripad Manoharrao Garge)</li>
+                <li>Autumn 2025: Real Analysis (MA 403), IIT Bombay (Instructor: Prof. Anusha Mangala Krishnan)</li>
+                <li>Spring 2025: General Topology (MA 406), IIT Bombay (Instructor: Prof. Chandan Biswas)</li>
+                <li>
+                    <p>Introduction to Algebraic Topology (MA 232), IISc, Bangalore:</p>
+                    <ul>
+                        <li>Oct 2020 – Jan 2021 (Instructor - Prof. Siddhartha Gadgil)</li>
+                        <li>Aug 2021 – Dec 2021 (Instructor - Prof. Basudeb Datta)</li>
+                        <li>Aug 2022 – Dec 2022 (Instructor - Prof. Harish Seshadri)</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Dec 2022: Annual Foundation School – I, Mepco Schlenk Engineering College, Sivakasi (Instructor - Prof. H. A. Gururaja)</p>
+                </li>
+            </ul>
         </div>
 
         <div class="section awards">
-            <h2 class="section-title">Awards & Fellowships</h2>
+            <h2 class="section-title">Awards &amp; Fellowships</h2>
             <ul>
-                <li>National Board of Higher Mathematics M.A./M.Sc. Scholarship, 2018</li>
+                <li>National Post Doctoral Fellowship (N-PDF) Scheme, Jul 2026 (declined)</li>
+                <li>National Board of Higher Mathematics Post-Doctoral Fellowship, Apr 2026</li>
+                <li>National Board of Higher Mathematics Post-Doctoral Fellowship, Nov 2024 (declined)</li>
+                <li>CSIR National Eligibility Test, Junior Research Fellowship (Rank 23), Jun 2019 (declined)</li>
                 <li>National Board of Higher Mathematics Ph.D. Scholarship, 2019</li>
-                <li>CSIR National Eligibility Test, Junior Research Fellowship (Rank 23), Jun 2019</li>
-				<li>National Board of Higher Mathematics Post-Doctoral Fellowship, Jun 2024</li>
+                <li>National Board of Higher Mathematics M.A./M.Sc. Scholarship, 2018 (declined)</li>
             </ul>
         </div>
 
         <div class="section service">
             <h2 class="section-title">Service</h2>
-            <p>Co-organizer of Students' Topology & Geometry Seminars. Developed and maintained the seminar's website:  <a href="https://stgsiisc.github.io/" target="_blank">stgsiisc.github.io</a>.</p>
+            <p>Co-organizer, Students' Topology &amp; Geometry Seminar, Department of Mathematics, IISc. Developed and maintained the seminar's website: <a href="https://stgsiisc.github.io/" target="_blank">stgsiisc.github.io</a>.</p>
         </div>
 
         <div class="section conferences">
             <h2 class="section-title">Participation in Workshops and Conferences</h2>
-			<ul>
-				<li>Feb 2025 – Mar 2025, New trends in Teichm&uuml;ller theory, ICTS, Bangalore.</li>
-				<li>Nov 2024 – Dec 2024, NCMW - Operads in Topology, IIT Bombay.</li>
+            <ul>
+                <li>Feb 2026, Geometric Structures and Stability, ICTS, Bangalore.</li>
+                <li>Dec 2025, Recent Advances in Stable Homotopical Computations, IIT, Roorkee.</li>
+                <li>Feb 2025 – Mar 2025, New Trends in Teichm&uuml;ller Theory, ICTS, Bangalore.</li>
+                <li>Nov 2024 – Dec 2024, NCMW - Operads in Topology, IIT Bombay.</li>
                 <li>Jul 2024 – Aug 2024, Geometry in Groups, ICTS, Bangalore.</li>
-                <li>Jun 2024, NCMW - Holomorphic and Topological Methods in Symplectic Geometry, ISI Kolkata.</li>
-                <li>Sep 2023, Low-Dimensional Topology at IISER Pune.</li>
+                <li>Jun 2024, NCMW – Holomorphic and Topological Methods in Symplectic Geometry, ISI Kolkata.</li>
+                <li>Sep 2023, Low-Dimensional Topology, IISER Pune.</li>
                 <li>May 2023, 1, 2, 3: Curves, Surfaces, and 3-Manifolds at Technion - Israel Institute of Technology, Haifa.</li>
-                <li>Jul 2021, Tech Topology Summer school at Georgia Institute of Technology (virtual).</li>
+                <li>Jul 2021, Tech Topology Summer School, Georgia Institute of Technology (virtual).</li>
             </ul>
         </div>
 
@@ -270,33 +265,20 @@
             Department of Mathematics<br>
             Indian Institute of Science<br>
             Bangalore 560012, India<br>
-            <!--Email: <a href="mailto:gadgil@iisc.ac.in">gadgil@iisc.ac.in</a><br>
-            Website: <a href="https://math.iisc.ac.in/~gadgil//" target="_blank">math.iisc.ac.in/~gadgil</a></p>-->
+            </p>
 
             <p><strong>Prof. Subhojoy Gupta</strong><br>
             Department of Mathematics<br>
             Indian Institute of Science<br>
             Bangalore 560012, India<br>
-            <!--Email: <a href="mailto:subhojoy@iisc.ac.in">subhojoy@iisc.ac.in</a><br>
-            Website: <a href="https://sites.google.com/view/subhojoy/" target="_blank">sites.google.com/view/subhojoy</a></p>-->
+            </p>
 
             <p><strong>Prof. Harish Seshadri</strong><br>
             Department of Mathematics<br>
             Indian Institute of Science<br>
             Bangalore 560012, India<br>
-            <!--Email: <a href="mailto:harish@iisc.ac.in">harish@iisc.ac.in</a><br>
-            Website: <a href="https://math.iisc.ac.in/~harish/" target="_blank">math.iisc.ac.in/~harish</a></p>-->
+            </p>
         </div>
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
