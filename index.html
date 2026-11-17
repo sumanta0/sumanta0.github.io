@@ -36,19 +36,20 @@
   .nav li {
       display: inline;
   }
-  .nav a:link, .nav a:visited {
+  .nav a, .nav a:link, .nav a:visited {
       display: inline-block;
       font-weight: bold;
       background: -webkit-linear-gradient(white, black);
       text-align: center;
       padding: 0px 20px 0px 20px;
       text-decoration: none;
+      color: black; /* Links are black by default */
   }
-  .nav a:link {
-      color: white;
+  .nav a.active {
+      color: white; /* Turns white if it is the current page */
   }
-  .nav a:visited {
-      color: black;
+  .nav a:hover {
+      color: gray; /* Turns gray on hover */
   }
   p {
       margin-left: auto;
@@ -81,7 +82,7 @@
 <h1 align="center" style="font-family: 'Bungee Shade', cursive; font-size:45px;">Sumanta Das</h1>
 
 <ul class="nav">
-  <li><a id="about" href="index.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
+  <li><a id="about" class="active" href="index.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
   <li><a id="research" href="research.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
   <li><a id="teaching" href="teaching.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
   <li><a id="others" href="others.html" style="font-family: 'Cinzel Decorative', cursive; font-size: 25px"></a></li>
